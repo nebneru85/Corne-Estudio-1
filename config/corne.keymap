@@ -14,7 +14,7 @@
 
 //numero de leds inferiores
 &led_strip {
-    chain-length = <27>;
+    chain-length = <54>;
 };
 
 
