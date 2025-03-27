@@ -76,10 +76,10 @@
             //           |    |    |    |    |         |   #  |   $  |  %  |
                         display-name = "Signos";
                         bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans       &LEFT_PARENTHESIS  &RIGHT_PARENTHESIS  &LEFT_BRACE  &RIGHT_BRACE  &LEFT_BRACKET  &RIGHT_BRACKET
-&trans  &trans  &trans  &trans  &trans  &trans       &BACKSLASH         &SLASH              &AT_SIGN     &EXCLAMATION  &LESS_THAN     &GREATER_THAN
-&trans  &trans  &trans  &trans  &trans  &trans       &EQUAL             &UNDERSCORE         &SEMICOLON   &COLON        &APOSTROPHE    &SINGLE_QUOTE
-                        &trans  &trans  &trans       &HASH              &DOLLAR             &PERCENT
+&trans  &trans  &trans  &trans  &trans  &trans       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans  &trans  &trans  &trans  &trans  &trans       &kp BACKSLASH         &kp SLASH              &kp AT_SIGN     &kp EXCLAMATION  &kp LESS_THAN     &kp GREATER_THAN
+&trans  &trans  &trans  &trans  &trans  &trans       &kp EQUAL             &kp UNDERSCORE         &kp SEMICOLON   &kp COLON        &kp APOSTROPHE    &kp SINGLE_QUOTE
+                        &trans  &trans  &trans       &kp HASH              &kp DOLLAR             &kp PERCENT
                         >;
                 };
 
