@@ -70,16 +70,16 @@
 
                 Signos_layer {
             // -----------------------------------------------------------------------------------------
-            // |    |    |    |    |    |    |         |     |     |     |     |     |     |
-            // |    |    |    |    |    |    |         |     |     |     |     |     |     |
-            // |    |    |    |    |    |    |         |     |     |     |     |     |     |
-            //           |    |    |    |    |         |     |     |     |
+            // |    |    |    |    |    |    |         |  (   |   )  |  {  |  }  |  [   |  ]  |
+            // |    |    |    |    |    |    |         |  \,| |  /,? |  @  |  !  |  <   |  >  |
+            // |    |    |    |    |    |    |         |  =   |  _   |  ;  |  :  |  '   |  "  |
+            //           |    |    |    |    |         |      |   $  |  %  |
                         display-name = "Signos";
                         bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans       &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans       &LEFT_PARENTHESIS  &RIGHT_PARENTHESIS  &LEFT_BRACE  &RIGHT_BRACE  &LEFT_BRACKET  &RIGHT_BRACKET
+&trans  &trans  &trans  &trans  &trans  &trans       &BACKSLASH         &SLASH              &AT_SIGN     &EXCLAMATION  &LESS_THAN     &GREATER_THAN
+&trans  &trans  &trans  &trans  &trans  &trans       &EQUAL             &UNDERSCORE         &SEMICOLON   &COLON        &APOSTROPHE    &SINGLE_QUOTE
+                        &trans  &trans  &trans       &trans             &DOLLAR             &PERCENT
                         >;
                 };
 
