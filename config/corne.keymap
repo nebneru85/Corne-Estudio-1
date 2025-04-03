@@ -61,16 +61,16 @@
 
                 QWERTY_layer {
             // -----------------------------------------------------------------------------------------
-            // | ESCAPE |  Q  |  W  |  E  |  R  |  T       |          |  Y    |  U   |  I   |  O  |  P  |BKSP  |
-            // | TAB    |  A  |  S  |  D  |  F  |  G       |          |  H    |  J   |  K   |  L  |  ;  | ENT  |
-            // | LSHFT  |  Z  |  X  |  C  |  V  |  B       |          |  N    |  M   |  ,   |  .  |  /  |RSHFT |
-            //                      | CTL | SPC | mo 1 del |          | ENTER | SPC  | mo 3 |
+            // | ESCAPE |  Q  |  W  |  E  |  R  |  T       |          |  Y    |  U   |  I       |  O  |  P  |BKSP  |
+            // | TAB    |  A  |  S  |  D  |  F  |  G       |          |  H    |  J   |  K       |  L  |  ;  | ENT  |
+            // | LSHFT  |  Z  |  X  |  C  |  V  |  B       |          |  N    |  M   |  ,       |  .  |  /  |RSHFT |
+            //                      | CTL | SPC | mo 1 del |          | ENTER | SPC  | mo 3 Alt |
                         display-name = "QWERTY";
                         bindings = <
 &kp ESCAPE  &kp Q  &kp W  &kp E              &kp R         &kp T        &kp Y        &kp U      &kp I      &kp O    &kp P     &kp BACKSPACE
 &kp TAB     &kp A  &kp S  &kp D              &kp F         &kp G        &kp H        &kp J      &kp K      &kp L    &kp SEMI  &kp ENTER
 &kp LSHFT   &kp Z  &kp X  &kp C              &kp V         &kp B        &kp N        &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                          &kp LEFT_CONTROL   &kp SPACE     &lt 1 DEL    &lt 4 ENTER  &kp SPACE  &mo 4
+                          &kp LEFT_CONTROL   &kp SPACE     &lt 1 DEL    &lt 4 ENTER  &kp SPACE  &lt 3 RIGHT_ALT 
                         >;
                 };
                 Media-Num_layer {
@@ -111,25 +111,25 @@
             //                   | CTL | Alt | boot |          | boot |PRSC |PAUSE|
                         display-name = "Fun";
                         bindings = <
-&kp F1          &kp F2        &kp F3        &kp F4             &kp F5          &kp F6               &kp F7        &kp F8                &kp F9           &kp F10        &kp F11        &kp F12
-&trans          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3       &kp NUMBER_4    &kp NUMBER_5         &kp NUMBER_6  &kp NUMBER_7          &kp NUMBER_8     &kp NUMBER_9   &kp NUMBER_0   &kp ENTER
-&sys_reset      &kp MINUS     &kp EQUAL     &kp RIGHT_BRACKET  &kp APOSTROPHE  &kp BACKSLASH        &kp TILDE     &kp NON_US_BACKSLASH  &kp GRAVE        &kp AMPERSAND  &kp AMPERSAND  &sys_reset
-                                            &kp LEFT_CONTROL   &kp LEFT_ALT    &bootloader          &bootloader        &kp PRINTSCREEN       &kp PAUSE_BREAK
+&kp F1          &kp F2        &kp F3        &kp F4             &kp F5          &kp F6               &kp F7        &kp F8                &kp F9          &kp F10        &kp F11        &kp F12
+&trans          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3       &kp NUMBER_4    &kp NUMBER_5         &kp NUMBER_6  &kp NUMBER_7          &kp NUMBER_8    &kp NUMBER_9   &kp NUMBER_0   &kp ENTER
+&sys_reset      &kp MINUS     &kp EQUAL     &kp RIGHT_BRACKET  &kp APOSTROPHE  &kp BACKSLASH        &kp TILDE     &kp NON_US_BACKSLASH  &kp GRAVE       &kp AMPERSAND  &kp AMPERSAND  &sys_reset
+                                            &kp LEFT_CONTROL   &kp LEFT_ALT    &bootloader          &bootloader   &kp PRINTSCREEN       &kp PAUSE_BREAK
                         >;
         
                 };
 
         RGB_layer  {
             // -----------------------------------------------------------------------------------------
-            // | BT NXT | BT0      | BT1       | BT2      | BT3  | BT4  |          |     |     |     |     |     |     |
-            // |Clear BT|          |  RGB_BRI  | RGB_HUI  |      |      |          |     |     |     |     |     |     |
-            // | Switch | RGB_EFF  |  RGB_BRD  | RGB_HUD  |      |      |          |     |     |     |     |     |     |
-            //                                 |          |      |          |     |     |     |
+            // | BT NXT | BT0     | BT1       | BT2      | BT3     | BT4      |          |     |     |     |     |     |     |
+            // |Clear BT| RGB_OFF |  RGB_BRI  | RGB_HUI  |         | Clear BT |          |     |     |     |     |     |     |
+            // | Switch | RGB_EFF |  RGB_BRD  | RGB_HUD  | OUT_USB | OUT_BLE  |          |     |     |     |     |     |     |
+            //                                |          |         |          |          |     |     |
                         display-name = "RGB";
                         bindings = <
 &bt BT_NXT      &bt BT_SEL 0      &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4            &trans         &trans          &trans         &trans         &trans         &trans
-&bt BT_CLR      &trans            &rgb_ug RGB_BRI   &rgb_ug RGB_HUI   &trans        &trans                  &trans         &trans          &trans         &trans         &trans         &trans
-&out OUT_TOG    &rgb_ug RGB_EFF   &rgb_ug RGB_BRD   &rgb_ug RGB_HUD   &trans        &trans                  &trans         &trans          &trans         &trans         &trans         &trans
+&rgb_ug RGB_ON  &rgb_ug RGB_OFF   &rgb_ug RGB_BRI   &rgb_ug RGB_HUI   &trans        &bt BT_CLR              &trans         &trans          &trans         &trans         &trans         &trans
+&out OUT_TOG    &rgb_ug RGB_EFF   &rgb_ug RGB_BRD   &rgb_ug RGB_HUD   &out OUT_USB  &out OUT_BLE            &trans         &trans          &trans         &trans         &trans         &trans
                                                     &trans            &trans        &trans                  &trans         &trans          &trans
                         >;
   
