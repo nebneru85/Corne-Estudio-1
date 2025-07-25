@@ -1,5 +1,30 @@
 #include <dt-bindings/led/led.h>
 
+
+&i2c {
+    status = "okay";
+
+    display: SSD1306 {
+        compatible = "solomon,SSD1306-i2c";
+        reg = <0x3c>;
+        width = <128>;
+        height = <64>;
+        rotation = <90>; /* 👈 Aquí rotas la pantalla 270 grados */
+
+        label = "DISPLAY";
+        segment-offset = <0>;
+        page-offset = <0>;
+        display-offset = <0>;
+        multiplex-ratio = <63>;
+
+        reset-gpios = <&gpio0 10 GPIO_ACTIVE_LOW>; /* Ajusta según tu conexión */
+    };
+};
+
+
+
+
+
 &pinctrl {
     spi3_default: spi3_default {
         group1 {
