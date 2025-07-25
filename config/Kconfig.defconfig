@@ -1,13 +1,13 @@
 if SHIELD_CORNE_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "TBcorne"
+    string "TBcorne"
 
 config USB_DEVICE_PRODUCT
-    default "TBcorne"
+    string "TBcorne"
 
 config BT_DEVICE_NAME
-    default "TBcorne"
+    string "TBcorne"
 
 
 
