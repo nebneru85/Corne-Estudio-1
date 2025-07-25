@@ -9,7 +9,7 @@
         reg = <0x3c>;
         width = <128>;
         height = <64>;
-        rotation = <90>; /* 👈 Aquí rotas la pantalla 270 grados */
+        rotation = <1>; /* 👈 Aquí rotas la pantalla 270 grados */
 
         label = "DISPLAY";
         segment-offset = <0>;
