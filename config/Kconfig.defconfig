@@ -31,6 +31,17 @@ config SSD1306
 
 endif # ZMK_DISPLAY
 
+
+
+
+choice ZMK_LV_FONT_DEFAULT_SMALL
+
+config ZMK_LV_FONT_DEFAULT_SMALL_MONTSERRAT_8
+        bool "Montserrat 8"
+        select LV_FONT_MONTSERRAT_8
+
+
+
 if LVGL
 
 config LV_Z_VDB_SIZE
