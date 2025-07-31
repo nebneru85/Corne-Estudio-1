@@ -1,13 +1,13 @@
 if SHIELD_CORNE_LEFT
 
 config ZMK_KEYBOARD_NAME
-    string "TBcorne"
+    default "TBcorne"
 
 config USB_DEVICE_PRODUCT
-    string "TBcorne"
+    default ZMK_KEYBOARD_NAME
 
 config BT_DEVICE_NAME
-    string "TBcorne"
+    default ZMK_KEYBOARD_NAME
 
 
 
@@ -30,16 +30,6 @@ config SSD1306
     default y
 
 endif # ZMK_DISPLAY
-
-
-
-
-choice ZMK_LV_FONT_DEFAULT_SMALL
-
-config ZMK_LV_FONT_DEFAULT_SMALL_MONTSERRAT_8
-        bool "Montserrat 8"
-        select LV_FONT_MONTSERRAT_8
-
 
 
 if LVGL
