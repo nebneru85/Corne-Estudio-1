@@ -11,8 +11,6 @@
 #   - board: nice_nano_v2
 #     shield: reviung41
 # <-- Volvemos al guion bajo porque la v0.3 usa el formato anterior
----
-
 
 include:
   - board: nice_nano_v2  
